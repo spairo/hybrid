@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="ClaroApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ClaroMusica</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css" media="screen" />
+  </head>
+  <body>
+
+    <video autoplay loop muted id="background">
+      <source src="assets/VideoSpotify.mp4" type="video/mp4">
+    </video>
+
+
+    <div class="view-container">
+      <section ui-view id="content" class="animate-fade-up">
+        <div class="spinner"><img src="assets/img/spinner.gif" width="60" atl="loading"></div>
+      </section>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.js""></script>
+    <script src="https://code.angularjs.org/1.5.3/angular-touch.min.js"></script>
+
+    <!-- needs bower -->
+    <!--
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.3.2.js"></script>
+    -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="assets/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="assets/bower_components/angular-loading-bar/src/loading-bar.js"></script>
+    <!-- end needs bower -->
+
+    <script src="app/app.js"></script>
+    <script src="app/controllers/mainCtrl.js"></script>
+    <script src="app/controllers/sliderCtrl.js"></script>
+  </body>
+</html>

@@ -11,9 +11,9 @@
 var ClaroApp = angular.module("ClaroApp",
   [
     "ui.router",
+    "matchMedia",
     "angular-loading-bar",
     "ngAnimate",
-    //"ui.bootstrap",
   ]
 )
 

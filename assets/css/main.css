@@ -1,26 +1,25 @@
 /* main css */
-*, *:before, *:after
-{
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
 html, body {
-  position: relative;
   background-color: transparent;
   height:100%;
-  margin: 0;
-  padding: 0;
+}
+.col-md-12,.row {
+  height:100%;
+}
+.row > div {
+  height:100%;
 }
 .view-container{
   width:100%;
-  height:100%;
-  background-position:center;
-  background-size:cover;
-  position: relative;
 }
 
+/* to make columns visible */
+.row .col-sm-2 {
+  background-color:#eee;
+}
+.row .col-sm-10 {
+  background-color:#ddd;
+}
 
 /* background Video */
 
@@ -39,45 +38,10 @@ html, body {
 }
 
 /* General */
+
 h1, p{
   color: #fff;
 }
-
-/* header sticky */
-
-.header{
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    height: auto;
-}
-  /* logo  header */
-
-  #logo{
-    /*background: transparent url('../assets/img/logo_claromusica_inicio.png') no-repeat;
-    width: 400px;
-    height: 75px;*/
-  }
-
-/* btn-sticky */
-
-.btn-sticky{
-  margin-bottom: -415px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 50px;
-}
-
-.icon-center{
-  background: transparent("../img/icon_start.png") no-repeat;
-  width: 56px;
-  height: 56px;
-  position: absolute;
-  top: 0px;
-  margin: auto 0;
-}
-
 
 /* Extra Small Devices, Phones */
 
@@ -91,6 +55,7 @@ h1, p{
   }
   .slide_logo{
     position: relative;
+    height: auto;
     float:none;
     margin: 0 auto;
     display: table;
@@ -112,8 +77,21 @@ h1, p{
     /* top: 50px; */
     margin: 0 auto;
   }
+  .title-slide{
+    font-size: 1.2em;
+    text-align: center;
+    color: #fff;
+    margin: 5px 0 5px 0;
+    font-weight: bold;
+  }
+  .label-slide{
+    font-weight: bold;
+    color: #0E498A;
+    font-size: 1em;
+    text-align: center;
+  }
   .lines-text{
-    font-size: 19px;
+    font-size: 1.2em;
     color: #fff;
     position: relative;
     float: none;
@@ -146,6 +124,7 @@ h1, p{
     left: 0;
     right: 0;
   }
+
   .btn-sticky-footer{
       background: #0f55a1; /* Old browsers */
       background: -moz-linear-gradient(top,  #0f55a1 0%, #0d2e53 100%); /* FF3.6-15 */
@@ -199,36 +178,32 @@ h1, p{
     margin-bottom:50px;
   }
   .carousel-indicators {
-    bottom:-50px;
+    bottom: 80px;
   }
-  .btn-footer{
-    position: absolute;
-  }
-
-  /* ionic */
-
-  .slider {
+  .footer-block{
+    width: 100%;
     position: relative;
-    height: 100; /* slider height you want */
-    background: red;
+    height: 5px;
+    float: none;
+    margin: 0 auto;
+    display: table;
+    table-layout: fixed;
+    overflow: hidden;
   }
-  .slider-slide {
-    background: yellow;
-    position: absolute;
-    color: #000;
-    background-color: #fff;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-  }
-  .tablet_layer{
-    background: transparent;
-  }
+    .footer-block .text-footer-left{
+      float:  left;
+      color: #fff;
+    }
+    .footer-block .text-footer-right{
+      float:  right;
+      color: #fff;
+    }
 }
 
 /* Tablets */
 
 @media only screen and (min-width : 768px){
+
   #logo{
     background: transparent url('../img/logo_claromusica_inicio_small.png') no-repeat;
     width: 400px;
@@ -238,7 +213,7 @@ h1, p{
   }
   .tablet_layer{
     background: #000;
-    opacity: 0.7;
+    opacity: 0.9;
   }
   .slide_logo{
     position: relative;
@@ -246,7 +221,7 @@ h1, p{
     margin: 0 auto;
     display: table;
     table-layout: fixed;
-    top: 5px;
+    top: 50px;
   }
   label{
     position: relative;
@@ -260,17 +235,31 @@ h1, p{
     width: 56px;
     height: 56px;
     position: relative;
-    /* top: 50px; */
+    top: 50px;
     margin: 0 auto;
   }
+  .title-slide{
+    text-align: center;
+    color: #fff;
+    margin: 40px 0 5px 0;
+    font-weight: bold;
+    font-size: 1.6em;
+  }
+  .label-slide{
+    font-weight: bold;
+    color: #0E498A;
+    font-size: 1em;
+    text-align: center;
+  }
   .lines-text{
-    font-size: 19px;
+    font-size: 1.2em;
     color: #fff;
     position: relative;
     float: none;
     margin: 0 auto;
     display: table;
     table-layout: fixed;
+    top: 50px;
   }
     .lines-text li{
       white-space: normal;
@@ -279,7 +268,7 @@ h1, p{
     word-wrap: break-word;
     white-space: normal;
     border: 1px solid #333;
-    margin-top: 30px;
+    margin-top: 60px;
     background: #0f55a1; /* Old browsers */
     background: -moz-linear-gradient(top,  #333336 0%, #020203 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top,  #333336 0%,#020203 100%); /* Chrome10-25,Safari5.1-6 */
@@ -326,9 +315,11 @@ h1, p{
     width: 250px;
   }
   .text-footer{
-    float: left;
     color:#fff;
-    margin-left: 10px;
+    text-align: left;
+  }
+  .text-footer2{
+    color:#fff;
   }
   .carousel{
     position: relative;
@@ -350,28 +341,29 @@ h1, p{
     margin-bottom:50px;
   }
   .carousel-indicators {
-    bottom:-50px;
+    bottom: 95px;
   }
   .btn-footer{
     position: absolute;
   }
-
-  /* ionic */
-
-  .slider {
+  .footer-block{
+    width: 100%;
     position: relative;
-    height: 100; /* slider height you want */
-    background: red;
+    height: 5px;
+    float: none;
+    margin: 0 auto;
+    display: table;
+    table-layout: fixed;
+    overflow: hidden;
   }
-  .slider-slide {
-    background: yellow;
-    position: absolute;
-    color: #000;
-    background-color: #fff;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-  }
+    .footer-block .text-footer-left{
+      float:  left;
+      color: #fff;
+    }
+    .footer-block .text-footer-right{
+      float:  right;
+      color: #fff;
+    }
 }
 
 /* spinner */
@@ -381,4 +373,49 @@ h1, p{
 	margin-top: 100px;
   position:relative;
   display: block;
+}
+
+
+/* Animates */
+
+.slide.ng-leave 	{ z-index:9999; }
+.slide.ng-enter 	{ z-index:8888; }
+
+/* page specific animations */
+
+.slide.ng-leave{
+  -webkit-transform-origin: 0% 0%;
+	-webkit-animation: rotateFall 1s both ease-in;
+	-moz-transform-origin: 0% 0%;
+	-moz-animation: rotateFall 1s both ease-in;
+	transform-origin: 0% 0%;
+	animation: rotateFall 1s both ease-in;
+}
+.slide.ng-enter{
+  -webkit-animation:scaleUp 0.5s both ease-in;
+	-moz-animation:scaleUp 0.5s both ease-in;
+	animation:scaleUp 0.5s both ease-in;
+}
+
+/* rotate and fall */
+@-webkit-keyframes rotateFall {
+	0% { -webkit-transform: rotateZ(0deg); }
+	20% { -webkit-transform: rotateZ(10deg); -webkit-animation-timing-function: ease-out; }
+	40% { -webkit-transform: rotateZ(17deg); }
+	60% { -webkit-transform: rotateZ(16deg); }
+	100% { -webkit-transform: translateY(100%) rotateZ(17deg); }
+}
+@-moz-keyframes rotateFall {
+	0% { -moz-transform: rotateZ(0deg); }
+	20% { -moz-transform: rotateZ(10deg); -moz-animation-timing-function: ease-out; }
+	40% { -moz-transform: rotateZ(17deg); }
+	60% { -moz-transform: rotateZ(16deg); }
+	100% { -moz-transform: translateY(100%) rotateZ(17deg); }
+}
+@keyframes rotateFall {
+	0% { transform: rotateZ(0deg); }
+	20% { transform: rotateZ(10deg); animation-timing-function: ease-out; }
+	40% { transform: rotateZ(17deg); }
+	60% { transform: rotateZ(16deg); }
+	100% { transform: translateY(100%) rotateZ(17deg); }
 }

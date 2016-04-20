@@ -11,7 +11,7 @@
 var ClaroApp = angular.module("ClaroApp",
   [
     "ui.router",
-    "matchMedia",
+    //"matchMedia",
     "angular-loading-bar",
     "ngAnimate",
   ]
@@ -23,9 +23,14 @@ ClaroApp.config(function($stateProvider, $urlRouterProvider){
 
     .state('landing', {
       url: '/landing',
+      controller: 'mainCtrl',
       templateUrl: 'views/landing.html',
     })
-
-    // catch all route
+    .state('mobile', {
+      url: '/mobile',
+      controller: 'mainCtrl',
+      templateUrl: 'views/mobile.html',
+    })
+    
     $urlRouterProvider.otherwise('/landing');
 })

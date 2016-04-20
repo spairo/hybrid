@@ -8,8 +8,24 @@
 * Controller of the ClaroApp
 */
 
-ClaroApp.controller("sliderCtrl", function($scope, screenSize){
+ClaroApp.controller("sliderCtrl", function($scope){
 
+  $scope.event = {
+        prizes: [{
+            name: "name",
+            description: "description"
+        }, {
+            name: "name2",
+            description: "description2"
+        }, {
+            name: "name3",
+            description: "description3"
+        }, {
+            name: "name4",
+            description: "description4"
+        }]
+  };
+  /*
   $scope.tablet = screenSize.on('sm', function(match){
     $scope.tablet = match;
   });
@@ -25,6 +41,8 @@ ClaroApp.controller("sliderCtrl", function($scope, screenSize){
   screenSize.when('xs', function(){
         console.log('mobile');
   });
+  */
+  $scope.bar = "foobar";
 
   $scope.slides = [{
       id: "1",

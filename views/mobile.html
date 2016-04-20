@@ -1,41 +1,34 @@
-<div id="carousel" class="carousel slide" data-ride="carousel" ng-controller="sliderCtrl">
-    <!--
+<div id="carousel" class="carousel slide" data-ride="carousel" ng-controller="mainCtrl">
+
     <ol class="carousel-indicators">
         <li ng-repeat="slide in slides" data-target="#carousel" data-slide-to="{{$index}}" class="" ng-class="{ active: $index == 0}"></li>
     </ol>
-  -->
-    <div class="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-md-offset-4">
-                    <div id="logo"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <div class="carousel-inner" role="listbox">
         <div ng-repeat="slide in slides" class="item" ng-class="{ active: $index == 0}">
-            <div class="fill">
-                <div class="container">
-                    <img ng-show="slide.logo" src="{{slide.logo}}" class="">
-                    <div class="icon-center"></div>
-                    <h1 class="text-center">{{slide.title}}</h1>
-                    <ul class="lines-text" ng-repeat="text in texts" ng-bind-html-unsafe="text.line">
-                        <li>{{text.line}}</li>
-                    </ul>
-                    <br />
-                    <br />
-                    <button ng-show="slide.btn_block_text" type="button" class="btn btn-primary btn-block">
-                        {{slide.btn_block_text}}
-                    </button>
-                    <button ng-show="slide.btn_block_text2" type="button" class="btn btn-primary btn-block">
-                        {{slide.btn_block_text}}
-                    </button>
-                    <div class="carousel-caption"></div>
-                    <div class="btn-sticky">
-                        <div class="col-md-4 col-md-offset-4">
-                            <button type="button" ng-click="foo()" class="btn btn-primary btn-lg responsive-width-left"> {{slide.btn_text}}</button>
-                            <button type="button" class="btn btn-primary btn-lg responsive-width-right"> {{slide.btn_text2}}</button>
+            <div class="container view-container">
+                <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-xs-12 col-sm-6 tablet_layer" setHeight>
+                        <img ng-show="slide.logo" class="slide_logo" src="{{slide.logo}}">
+                        <div class="icon-center"></div>
+                        <ul class="lines-text">
+                            <li>{{slide.ul_text}}</li>
+                            <li>{{slide.ul_text2}}</li>
+                            <li>{{slide.ul_text3}}</li>
+                            <li>{{slide.ul_text4}}</li>
+                            <li>{{slide.ul_text5}}</li>
+                        </ul>
+                        <a ng-show="slide.btn_block_text" type="button" ng-click="foo()" class="btn btn-primary btn-block">
+                            {{slide.btn_block_text}}
+                        </a>
+                        <a ng-show="slide.btn_block_text2" type="button" class="btn btn-primary btn-block">
+                            {{slide.btn_block_text2}}
+                        </a>
+                        <br />
+                        <div class="text-center" style="position: relative; margin-top: 10px;">
+                            <a type="button" ng-click="foo()" href="{{slide.ios_path}}" class="btn btn-primary btn-lg btn-sticky-footer"> {{slide.btn_text}}</a>
+                            <a type="button" class="btn btn-primary btn-lg btn-lg btn-sticky-footer"> {{slide.btn_text2}}</a>
                         </div>
                         <div class="text-left text-footer">{{slide.footer_label}}</div>
                         <div class="text-left text-footer">{{slide.footer_label2}}</div>
@@ -53,16 +46,3 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
-
-<!--
-<footer class="footer">
-  <div class="container">
-    <div class="row">
-        <div class="col-md-4 col-md-offset-4">
-          <button type="button" class="btn btn-primary btn-lg responsive-width-left"> [[testing]]</button>
-          <button type="button" class="btn btn-primary btn-lg responsive-width-right"> [[text]]</button>
-        </div>
-    </div>
-  </div>
-</footer>
--->

@@ -1,39 +1,37 @@
 <!DOCTYPE html>
 <html lang="es" ng-app="ClaroApp">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no, initial-scale=1.0001, maximum-scale=1.0001, minimum-scale=1.0001, user-scalable=no">
     <title>ClaroMusica</title>
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/main.css" rel="stylesheet" type="text/css" media="screen" />
-  </head>
-  <body>
-
+    <link href="assets/css/core.min.css" rel="stylesheet">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.css' type='text/css' media='all' />
+</head>
+<body>
+    <!--
     <video autoplay loop muted id="background">
-      <source src="assets/VideoSpotify.mp4" type="video/mp4">
+        <source src="assets/VideoSpotify.mp4" type="video/mp4">
     </video>
-
+    -->
     <div class="col-md-12 view-container">
-      <div class="slide" ui-view></div>
-        <!--<div class="spinner"><img src="assets/img/spinner.gif" width="60" atl="loading"></div>-->
+        <div class="slide" ui-view></div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.js""></script>
+    <script src="assets/lib/angular.js"></script>
+    <script src="assets/lib/angular-animate.js"></script>
+    <script src="assets/lib/angular-touch.min.js"></script>
 
     <!-- needs bower -->
+    <script src="assets/lib/jquery.min.js"></script>
     <script src="assets/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="assets/bower_components/angular-media-queries/match-media.js"></script>
-    <script src="assets/bower_components/angular-loading-bar/src/loading-bar.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <!-- end needs bower -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.js" type="text/javascript"></script>
+    <script src="assets/lib/bootstrap.min.js"></script>
 
+    <!-- core -->
     <script src="app/app.js"></script>
     <script src="app/controllers/mainCtrl.js"></script>
-    <script src="app/controllers/sliderCtrl.js"></script>
     <script src="app/directives/main.js"></script>
-  </body>
+</body>
 </html>

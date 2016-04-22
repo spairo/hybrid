@@ -11,11 +11,12 @@
 var ClaroApp = angular.module("ClaroApp",
   [
     "ui.router",
-    //"matchMedia",
+    "matchMedia",
     "angular-loading-bar",
     "ngAnimate",
+    "ngTouch"
   ]
-)
+);
 
 ClaroApp.config(function($stateProvider, $urlRouterProvider){
 
@@ -31,6 +32,6 @@ ClaroApp.config(function($stateProvider, $urlRouterProvider){
       controller: 'mainCtrl',
       templateUrl: 'views/mobile.html',
     })
-    
+
     $urlRouterProvider.otherwise('/landing');
-})
+});

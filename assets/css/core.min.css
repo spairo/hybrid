@@ -73,18 +73,7 @@ html, body {
 
 /* iPhone 6 */
 
-@media screen and (device-aspect-ratio: 375/667){
-  /*
-  .box{
-    display: inline;
-    top: 50% !important;
-    left: 0 !important;
-    position: relative !important;
-    width: 100%;
-    background: #ccc;
-  }
-  */
-}
+/*@media screen and (device-aspect-ratio: 375/667){}*/
 
 /* Custom, iPhone Retina [fix iphone 5] */
 
@@ -218,8 +207,8 @@ html, body {
 
   .btn-sticky-footer{
       font-weight: bold;
-      min-width: 130px;
       max-width: 130px;
+      max-height: 50px;
       float: left;
       padding: 15px 0;
       font-size: 1em;
@@ -229,6 +218,28 @@ html, body {
       background: linear-gradient(to bottom,  #0f55a1 0%,#0d2e53 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f55a1', endColorstr='#0d2e53',GradientType=0 ); /* IE6-9 */
   }
+    .btn-sticky-footer .price{
+      height: 100%;
+      color: #fff;
+      font-weight: bold;
+      font-size: 35px;
+      text-align: left;
+      margin-right: 10px;
+      white-space: normal;
+      word-wrap: break-word;
+      position: relative;
+      top: -9px;
+    }
+    .btn-sticky-footer .membership{
+      width: 30px;
+      color: #fff;
+      font-size: 1em;
+      top: -18px;
+      position: relative;
+      text-align: right;
+      white-space: normal;
+      word-wrap: break-word;
+    }
   .btn-sticky-footer-2{
       font-weight: bold;
       min-width: 130px;

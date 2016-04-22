@@ -9,7 +9,7 @@
                     <div class="container view-container">
 
                         <img ng-show="slide.logo" class="slide_logo" src="{{slide.logo}}">
-                        <div class="icon-center"></div>
+                        <!--<div class="icon-center"></div>-->
                         <img ng-show="slide.logo_title" class="slide_logo_img" src="{{slide.logo_title}}">
                         <div ng-show="slide.title" class="title-slide">{{slide.title}}</div>
 
@@ -34,8 +34,12 @@
                         <!-- //box -->
 
                         <div class="text-center" style="width: 100%; position: absolute; bottom: 0px; left: 0;">
-                            <a type="button" ng-click="slide.btn_block_url" class="btn btn-primary btn-lg btn-sticky-footer">{{slide.btn_text}}</a>
-                            <a type="button" ng-click="itemNext(filteredItems[$index + 1]); change()"  class="btn btn-primary btn-lg btn-lg btn-sticky-footer-2">{{slide.btn_text2}}</a>
+                            <a type="button" ng-click="slide.btn_block_url" class="btn btn-primary btn-lg btn-sticky-footer">
+                              <span class="price">$10</span><span class="membership">suscribete</span>
+                            </a>
+                            <a type="button" ng-click="itemNext(filteredItems[$index + 1]); change()" class="btn btn-primary btn-lg btn-lg btn-sticky-footer-2">
+                              {{slide.btn_text2}}
+                            </a>
                             <div class="footer-block container">
                                 <div class="text-footer-left">{{slide.footer_label}}</div>
                                 <div class="text-footer-right">{{slide.footer_label2}}</div>

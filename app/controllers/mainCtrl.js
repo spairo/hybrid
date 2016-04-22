@@ -36,7 +36,7 @@ ClaroApp.controller("mainCtrl", function($scope, screenSize){
 
   $scope.slides = [{
       id: "1",
-      logo: "assets/img/cm_claro_hdpi.png",
+      logo: "assets/img/01_cm_claro_xhdpi.png",
       title: "",
       logo_title: "assets/img/claro_hdpi.png",
       btn_text: "Inicia sesión",

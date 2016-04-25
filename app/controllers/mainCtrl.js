@@ -7,30 +7,14 @@
 * Controller of the ClaroApp
 */
 
-ClaroApp.controller("mainCtrl", function($scope, screenSize){
+ClaroApp.controller("mainCtrl", function($scope, $location, screenSize){
 
   $scope.mobile = screenSize.is('xs');
   $scope.tablet = screenSize.is('sm');
 
   //ng-class="{ active: $index == 0}">ng-class="{'selected': $index == selectedIndex}"
 
-    $scope.selectedIndex = 0;
-
-  $scope.change = function(){
-
-      alert($scope.active);
-
-      console.log($scope.active);
-
-      var last_item = $scope.myItems.length - 1;
-
-      if($scope.selectedIndex == last_item){
-        $scope.selectedIndex = 0;
-      }else{
-        $scope.selectedIndex += 1;
-      }
-
-  };
+  $scope.selectedIndex = 0;
 
   /*slider content*/
 
@@ -56,11 +40,12 @@ ClaroApp.controller("mainCtrl", function($scope, screenSize){
       ios_path: "callLoginUnique",
       ios_path2: "",
       footer_label: "",
-      footer_label2: ""
+      footer_label2: "",
+      next_slider: "next"
     },
     {
       id: "2",
-      logo: "assets/img/cm_gratuito_hdpi.png",
+      logo: "assets/img/02_cm_gratuito_xhdpi.png",
       title: "",
       logo_title: "",
       btn_text: "Escucha ahora",
@@ -82,11 +67,12 @@ ClaroApp.controller("mainCtrl", function($scope, screenSize){
       ios_path: "callLoginUnique",
       ios_path2: "",
       footer_label: "",
-      footer_label2: ""
+      footer_label2: "",
+      next_slider: "next"
    },
    {
      id: "3",
-     logo: "assets/img/cm_charts_hdpi.png",
+     logo: "assets/img/03_cm_charts_xhdpi.png",
      title: "",
      logo_title: "",
      btn_text: "Escucha ahora",
@@ -97,7 +83,7 @@ ClaroApp.controller("mainCtrl", function($scope, screenSize){
      btn_block_url2: "",
      trigger_1: "",
      trigger_2: "",
-     sub_icon: "",
+     sub_icon: "assets/img/03_cm_10_pesos_xhdpi.png",
      sublabel: "No gracias",
      sublabel_link: " escuchar gratis ahora",
      ul_text: "Toda la musica, millones de canciones",
@@ -108,10 +94,11 @@ ClaroApp.controller("mainCtrl", function($scope, screenSize){
      ios_path: "callLoginUnique",
      ios_path2: "",
      footer_label: "*Primer semana gratis",
-     footer_label2: ""
+     footer_label2: "",
+     next_slider: "next"
   },{
     id: "4",
-    logo: "assets/img/cm_ilimitado_hdpi.png",
+    logo: "assets/img/04_cm_ilimitado_xhdpi.png",
     title: "",
     btn_text: "Escucha ahora",
     btn_text2: "Quiero más",
@@ -131,26 +118,23 @@ ClaroApp.controller("mainCtrl", function($scope, screenSize){
     ios_path: "callLoginUnique",
     ios_path2: "",
     footer_label: "*Primer semana gratis",
-    footer_label2: "*Primer mes gratis"
+    footer_label2: "*Primer mes gratis",
+    next_slider: ""
  }];
 
-   //swipe apps
+   //swipe apps [fix swipe using jlite :(]
 
-   $scope.swipeL = function(){
-     alert("swipe left test");
-   };
-
-   $scope.swipeR = function(){
-     alert("swipe right test");
+   $scope.slide = function(dir){
+     if(dir == 1){
+        $('#carousel').carousel('prev');
+     }else{
+         $('#carousel').carousel('next');
+     }
    };
 
    $scope.login_android = function(){
       alert("login_android");
       //Android.redirect();
    };
-
-  $scope.someFunction = function() {
-      alert("left");
-  };
 
 });

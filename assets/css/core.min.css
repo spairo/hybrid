@@ -73,7 +73,9 @@ html, body {
 
 /* iPhone 6 */
 
-/*@media screen and (device-aspect-ratio: 375/667){}*/
+/*@media screen and (device-aspect-ratio: 375/667){
+
+}*/
 
 /* Custom, iPhone Retina [fix iphone 5] */
 
@@ -130,6 +132,15 @@ html, body {
     z-index:10;
     display: inline;
   }
+  .slide_sub_icon{
+    position: relative;
+    width: 50%;
+    height: auto;
+    float:none;
+    margin: 0 auto;
+    display: table;
+    table-layout: fixed;
+  }
   .slide_logo{
     position: relative;
     width: 55%;
@@ -169,6 +180,7 @@ html, body {
     color: #fff;
     font-size: 1em;
     text-align: center;
+    margin: 5px 0 5px 0;
   }
   .lines-text{
     font-size: 1.2em;
@@ -314,6 +326,7 @@ html, body {
     border-radius: 10px;
 }
   .footer-block{
+    padding-top: 6px;
     width: 100%;
     position: relative;
     height: 5px;
